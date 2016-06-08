@@ -1,0 +1,41 @@
+{
+  "name": "stylus-responsive-breakpoints",
+  "description": "a media queries of stylus block mixins",
+  "version": "0.0.0",
+  "files": [
+    "index.js",
+    "index.styl"
+  ],
+  "scripts": {
+    "start": "abby test --watch \"index.*,test.js\"",
+    "test": "ava",
+    "lint": "xo",
+    "postversion": "git push --follow-tags && conventional-github-releaser -p atom -r 0"
+  },
+  "xo": {
+    "space": 2
+  },
+  "devDependencies": {
+    "abigail": "^1.7.1",
+    "ava": "^0.15.2",
+    "conventional-github-releaser": "^1.1.2",
+    "stylus": "^0.54.5",
+    "xo": "^0.15.1"
+  },
+  "keywords": [
+    "stylus",
+    "stylus-plugin",
+    "mixin",
+    "block-mixin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/59naga/stylus-responsive-breakpoints.git"
+  },
+  "bugs": {
+    "url": "https://github.com/59naga/stylus-responsive-breakpoints/issues"
+  },
+  "homepage": "https://github.com/59naga/stylus-responsive-breakpoints#readme",
+  "author": "59naga <i59naga@icloud.com> (http://berabou.me/)",
+  "license": "MIT"
+}

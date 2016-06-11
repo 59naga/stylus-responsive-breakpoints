@@ -1,10 +1,10 @@
 {
   "name": "stylus-responsive-breakpoints",
   "description": "a media queries of stylus block mixins",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "files": [
-    "index.js",
-    "index.styl"
+    "stylus-responsive-breakpoints.styl",
+    "index.js"
   ],
   "scripts": {
     "start": "abby test --watch \"index.*,test.js\"",

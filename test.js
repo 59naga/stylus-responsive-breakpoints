@@ -7,7 +7,7 @@ const render = (str) => new Promise((resolve, reject) => {
   stylus(str)
   .set('compress', true)
   .use(stylusResponsiveBreakpoints())
-  .import('.')
+  .import('stylus-responsive-breakpoints')
   .render((err, css) => {
     if (err) {
       reject(err);

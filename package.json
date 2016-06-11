@@ -1,7 +1,7 @@
 {
   "name": "stylus-responsive-breakpoints",
   "description": "a media queries of stylus block mixins",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "files": [
     "stylus-responsive-breakpoints.styl",
     "index.js"

@@ -1,21 +1,23 @@
-import test from 'ava';
-import stylus from 'stylus';
+import test from 'ava'
+import stylus from 'stylus'
 
-import stylusResponsiveBreakpoints from './';
+import stylusResponsiveBreakpoints from './'
 
-const render = (str) => new Promise((resolve, reject) => {
+const render = (str) => {
+  let actualCss
   stylus(str)
   .set('compress', true)
   .use(stylusResponsiveBreakpoints())
   .import('stylus-responsive-breakpoints')
   .render((err, css) => {
     if (err) {
-      reject(err);
-      return;
+      throw err
     }
-    resolve(css);
-  });
-});
+    actualCss = css
+  })
+
+  return actualCss
+}
 
 const specs = [
   {
@@ -146,11 +148,11 @@ const specs = [
     `,
     expected: '@media (min-device-width:1025px){body{color:#fff}}'
   }
-];
+]
 
 specs.forEach(spec => {
-  test(async t => {
-    const {code, expected} = spec;
-    t.true((await render(code)) === expected);
-  });
-});
+  test(t => {
+    const {code, expected} = spec
+    t.true(render(code) === expected)
+  })
+})

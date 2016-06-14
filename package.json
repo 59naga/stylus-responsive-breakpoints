@@ -7,7 +7,7 @@
     "index.js"
   ],
   "scripts": {
-    "start": "abby test --watch \"index.*,test.js\"",
+    "start": "abby test --watch \"index.*,*.styl,test.js\"",
     "test": "ava",
     "lint": "xo",
     "postversion": "git push --follow-tags && conventional-github-releaser -p atom -r 0"
